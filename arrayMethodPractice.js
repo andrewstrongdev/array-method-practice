@@ -22,3 +22,48 @@ arrCw.copyWithin(2,0)    // copies 'red' and 'yellow' over 'green' and 'blue'. B
 //console.log(arrCw)
 
 //----------------------------------------------------------------
+
+//counting cards function with if else statements inside of a switch statement.
+let count = 0;
+
+function cc(card) {
+  
+switch(card){
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  count++
+  if(count<=0){
+    return count + 'Hold'
+  } else if (count>0){
+    return count + 'Bet'
+  }
+  break
+  case 7:
+  case 8:
+  case 9:
+   if(count<=0){
+    return count + 'Hold'
+  } else if (count>0){
+    return count + 'Bet'
+  }
+  break
+  case 10:
+  case 'J':
+  case 'Q':
+  case 'K':
+  case 'A':
+   count--
+  if(count<=0){
+    return count + 'Hold'
+  } else if (count>0){
+    return count + 'Bet'
+  }
+}
+}
+let r = cc('K')
+r = cc(4)
+r = cc(4)
+console.log(r)
